@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <title>API Reference</title>
+    <title>Bellona Documentation</title>
 
     <style>
       .highlight table td { padding: 5px; }
@@ -201,7 +201,7 @@
       <script src="javascripts/all.js"></script>
   </head>
 
-  <body class="index" data-languages="[&quot;shell&quot;,&quot;ruby&quot;,&quot;python&quot;,&quot;javascript&quot;]">
+  <body class="index" data-languages="[]">
     <a href="#" id="nav-button">
       <span>
         NAV
@@ -209,13 +209,7 @@
       </span>
     </a>
     <div class="toc-wrapper">
-      <img src="images/logo.png" class="logo" alt="Logo" />
-        <div class="lang-selector">
-              <a href="#" data-language-name="shell">shell</a>
-              <a href="#" data-language-name="ruby">ruby</a>
-              <a href="#" data-language-name="python">python</a>
-              <a href="#" data-language-name="javascript">javascript</a>
-        </div>
+      <img src="images/logo.jpg" class="logo" alt="Logo" />
         <div class="search">
           <input type="text" class="search" id="input-search" placeholder="Search">
         </div>
@@ -223,26 +217,209 @@
       <ul id="toc" class="toc-list-h1">
           <li>
             <a href="#introduction" class="toc-h1 toc-link" data-title="Introduction">Introduction</a>
-          </li>
-          <li>
-            <a href="#authentication" class="toc-h1 toc-link" data-title="Authentication">Authentication</a>
-          </li>
-          <li>
-            <a href="#kittens" class="toc-h1 toc-link" data-title="Kittens">Kittens</a>
               <ul class="toc-list-h2">
                   <li>
-                    <a href="#get-all-kittens" class="toc-h2 toc-link" data-title="Get All Kittens">Get All Kittens</a>
+                    <a href="#requirements" class="toc-h2 toc-link" data-title="Requirements">Requirements</a>
                   </li>
                   <li>
-                    <a href="#get-a-specific-kitten" class="toc-h2 toc-link" data-title="Get a Specific Kitten">Get a Specific Kitten</a>
+                    <a href="#installation" class="toc-h2 toc-link" data-title="Installation">Installation</a>
                   </li>
                   <li>
-                    <a href="#delete-a-specific-kitten" class="toc-h2 toc-link" data-title="Delete a Specific Kitten">Delete a Specific Kitten</a>
+                    <a href="#setup" class="toc-h2 toc-link" data-title="Setup">Setup</a>
+                  </li>
+                  <li>
+                    <a href="#development" class="toc-h2 toc-link" data-title="Development">Development</a>
                   </li>
               </ul>
           </li>
           <li>
-            <a href="#errors" class="toc-h1 toc-link" data-title="Errors">Errors</a>
+            <a href="#directory-structure" class="toc-h1 toc-link" data-title="Directory Structure">Directory Structure</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#app" class="toc-h2 toc-link" data-title="app">app</a>
+                  </li>
+                  <li>
+                    <a href="#config" class="toc-h2 toc-link" data-title="config">config</a>
+                  </li>
+                  <li>
+                    <a href="#public" class="toc-h2 toc-link" data-title="public">public</a>
+                  </li>
+                  <li>
+                    <a href="#resources" class="toc-h2 toc-link" data-title="resources">resources</a>
+                  </li>
+                  <li>
+                    <a href="#routes" class="toc-h2 toc-link" data-title=" routes"> routes</a>
+                  </li>
+                  <li>
+                    <a href="#storage" class="toc-h2 toc-link" data-title="storage">storage</a>
+                  </li>
+                  <li>
+                    <a href="#env" class="toc-h2 toc-link" data-title=".env">.env</a>
+                  </li>
+                  <li>
+                    <a href="#dockerfile-and-docker-compose-yml" class="toc-h2 toc-link" data-title="Dockerfile and docker-compose.yml">Dockerfile and docker-compose.yml</a>
+                  </li>
+                  <li>
+                    <a href="#htaccess" class="toc-h2 toc-link" data-title=".htaccess">.htaccess</a>
+                  </li>
+                  <li>
+                    <a href="#composer-json" class="toc-h2 toc-link" data-title="composer.json">composer.json</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#architecture" class="toc-h1 toc-link" data-title="Architecture">Architecture</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#the-request-lifecycle" class="toc-h2 toc-link" data-title="The Request Lifecycle">The Request Lifecycle</a>
+                  </li>
+                  <li>
+                    <a href="#the-service-container" class="toc-h2 toc-link" data-title="The Service Container">The Service Container</a>
+                  </li>
+                  <li>
+                    <a href="#facades" class="toc-h2 toc-link" data-title="Facades">Facades</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#routing" class="toc-h1 toc-link" data-title="Routing">Routing</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#defining-routes" class="toc-h2 toc-link" data-title="Defining routes">Defining routes</a>
+                  </li>
+                  <li>
+                    <a href="#route-parameters" class="toc-h2 toc-link" data-title="Route parameters">Route parameters</a>
+                  </li>
+                  <li>
+                    <a href="#dependency-injection-amp-implicit-model-binding" class="toc-h2 toc-link" data-title="Dependency injection &amp; implicit model binding">Dependency injection &amp; implicit model binding</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#middleware" class="toc-h1 toc-link" data-title="Middleware">Middleware</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#creating-middleware" class="toc-h2 toc-link" data-title="Creating middleware">Creating middleware</a>
+                  </li>
+                  <li>
+                    <a href="#using-middleware" class="toc-h2 toc-link" data-title="Using middleware">Using middleware</a>
+                  </li>
+                  <li>
+                    <a href="#implicit-model-binding" class="toc-h2 toc-link" data-title="Implicit model binding">Implicit model binding</a>
+                  </li>
+                  <li>
+                    <a href="#available-middleware" class="toc-h2 toc-link" data-title="Available middleware">Available middleware</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#authorization" class="toc-h1 toc-link" data-title="Authorization">Authorization</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#creating-policies" class="toc-h2 toc-link" data-title="Creating policies">Creating policies</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#controllers" class="toc-h1 toc-link" data-title="Controllers">Controllers</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#creating-controllers" class="toc-h2 toc-link" data-title="Creating controllers">Creating controllers</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#models" class="toc-h1 toc-link" data-title="Models">Models</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#creating-models" class="toc-h2 toc-link" data-title="Creating models">Creating models</a>
+                  </li>
+                  <li>
+                    <a href="#using-models" class="toc-h2 toc-link" data-title="Using models">Using models</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#views" class="toc-h1 toc-link" data-title="Views">Views</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#creating-views" class="toc-h2 toc-link" data-title="Creating views">Creating views</a>
+                  </li>
+                  <li>
+                    <a href="#using-views" class="toc-h2 toc-link" data-title="Using views">Using views</a>
+                  </li>
+                  <li>
+                    <a href="#sharing-data-between-views" class="toc-h2 toc-link" data-title="Sharing data between views">Sharing data between views</a>
+                  </li>
+                  <li>
+                    <a href="#extending-templates" class="toc-h2 toc-link" data-title="Extending templates">Extending templates</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#csrf-protection" class="toc-h1 toc-link" data-title="CSRF Protection">CSRF Protection</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#csrf-tokens-in-views" class="toc-h2 toc-link" data-title="CSRF tokens in views">CSRF tokens in views</a>
+                  </li>
+                  <li>
+                    <a href="#csrf-tokens-with-ajax" class="toc-h2 toc-link" data-title="CSRF tokens with ajax">CSRF tokens with ajax</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#form-validation" class="toc-h1 toc-link" data-title="Form Validation">Form Validation</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#manually-validating-data" class="toc-h2 toc-link" data-title=" Manually validating data"> Manually validating data</a>
+                  </li>
+                  <li>
+                    <a href="#validating-request-data" class="toc-h2 toc-link" data-title="Validating request data">Validating request data</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#file-uploads" class="toc-h1 toc-link" data-title="File Uploads">File Uploads</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#uploading-files" class="toc-h2 toc-link" data-title=" Uploading files"> Uploading files</a>
+                  </li>
+                  <li>
+                    <a href="#deleting-a-file" class="toc-h2 toc-link" data-title="Deleting a file">Deleting a file</a>
+                  </li>
+                  <li>
+                    <a href="#uploading-multiple-files" class="toc-h2 toc-link" data-title="Uploading multiple files">Uploading multiple files</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#query-builder" class="toc-h1 toc-link" data-title="Query Builder">Query Builder</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#fetching-multiple-records-with-db-get" class="toc-h2 toc-link" data-title="Fetching multiple records with DB::get()">Fetching multiple records with DB::get()</a>
+                  </li>
+                  <li>
+                    <a href="#fetching-a-single-record-with-db-first" class="toc-h2 toc-link" data-title="Fetching a single record with DB::first()">Fetching a single record with DB::first()</a>
+                  </li>
+                  <li>
+                    <a href="#counting-records-with-db-count" class="toc-h2 toc-link" data-title="Counting records with DB::count()">Counting records with DB::count()</a>
+                  </li>
+                  <li>
+                    <a href="#fetching-records-with-db-join-db-leftjoin-db-rightjoin-and-db-select" class="toc-h2 toc-link" data-title="Fetching records with DB::join(), DB::leftJoin(), DB::rightJoin(), and DB::select()">Fetching records with DB::join(), DB::leftJoin(), DB::rightJoin(), and DB::select()</a>
+                  </li>
+                  <li>
+                    <a href="#inserting-records" class="toc-h2 toc-link" data-title="Inserting records">Inserting records</a>
+                  </li>
+                  <li>
+                    <a href="#updating-records" class="toc-h2 toc-link" data-title="Updating records">Updating records</a>
+                  </li>
+                  <li>
+                    <a href="#deleting-records" class="toc-h2 toc-link" data-title="Deleting records">Deleting records</a>
+                  </li>
+                  <li>
+                    <a href="#direct-queries-with-db-query" class="toc-h2 toc-link" data-title="Direct queries with DB::query()">Direct queries with DB::query()</a>
+                  </li>
+              </ul>
           </li>
       </ul>
         <ul class="toc-footer">
@@ -254,251 +431,846 @@
       <div class="dark-box"></div>
       <div class="content">
         <h1 id='introduction'>Introduction</h1>
-<p>Welcome to the Kittn API! You can use our API to access Kittn API endpoints, which can get information on various cats, kittens, and breeds in our database.</p>
+<p>Welcome to the official documentation for Bellona, an open-source PHP framework inspired by Laravel!</p>
 
-<p>We have language bindings in Shell, Ruby, Python, and JavaScript! You can view code examples in the dark area to the right, and you can switch the programming language of the examples with the tabs in the top right.</p>
-
-<p>This example API documentation page was created with <a href="https://github.com/lord/slate">Slate</a>. Feel free to edit it and use it as a base for your own API&#39;s documentation.</p>
-<h1 id='authentication'>Authentication</h1>
-<blockquote>
-<p>To authorize, use this code:</p>
-</blockquote>
-<pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
-</code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">kittn</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
-</code></pre><pre class="highlight shell tab-shell"><code><span class="c"># With shell, you can just pass the correct header with each request</span>
-curl <span class="s2">"api_endpoint_here"</span>
-  -H <span class="s2">"Authorization: meowmeowmeow"</span>
-</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'kittn'</span><span class="p">);</span>
-
-<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">);</span>
-</code></pre>
-<blockquote>
-<p>Make sure to replace <code>meowmeowmeow</code> with your API key.</p>
-</blockquote>
-
-<p>Kittn uses API keys to allow access to the API. You can register a new Kittn API key at our <a href="http://example.com/developers">developer portal</a>.</p>
-
-<p>Kittn expects for the API key to be included in all API requests to the server in a header that looks like the following:</p>
-
-<p><code>Authorization: meowmeowmeow</code></p>
+<p>These documents are supposed to introduce many of the key concepts and provide examples showing you how to use Bellona in your own application. However, they do not introduce everything that Bellona has to offer; many other services and functions go undocumented here, but you can find more details at the full <a href="#">Bellona API reference</a> (coming soon...).</p>
+<h2 id='requirements'>Requirements</h2>
+<ul>
+<li>PHP &gt;= 7.1</li>
+<li>mod_rewrite Apache module enabled</li>
+<li>PDO PHP extension</li>
+<li>OpenSSL PHP extension</li>
+<li>JSON PHP extension</li>
+</ul>
+<h2 id='installation'>Installation</h2><h3 id='via-composer-create-project'>Via <code>composer create-project</code></h3>
+<ol>
+<li>Create project with <code>composer create-project</code>:<br>
+<code>composer create-project jlwalker/bellona my-project</code></li>
+</ol>
+<h3 id='via-git-clone'> Via <code>git clone</code></h3>
+<ol>
+<li>Clone the Bellona project directory to quickly setup your project structure:<br>
+<code>git clone https://github.com/jlwalkerlg/bellona.git my-project</code><br>
+<code>cd my-project</code></li>
+<li>Install all the required packages through composer:<br>
+<code>composer install</code></li>
+</ol>
 
 <aside class="notice">
-You must replace <code>meowmeowmeow</code> with your personal API key.
+  Since Bellona requires PHP >= 7.1, composer will throw an error if your system does not match this requirement when installing the framework. If you are using Docker, you will want to tell composer to ignore this requirement by adding the <code>--ignore-platform-reqs</code> flag.
 </aside>
-<h1 id='kittens'>Kittens</h1><h2 id='get-all-kittens'>Get All Kittens</h2><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
+<h2 id='setup'>Setup</h2>
+<ol>
+<li>Rename the <code>.env.example</code> file to <code>.env</code>.</li>
+<li>Configure Bellona by editing the <code>.env</code> file and the <code>app/config</code> files where appropriate.</li>
+</ol>
 
-<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="p">.</span><span class="nf">kittens</span><span class="p">.</span><span class="nf">get</span>
-</code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">kittn</span>
+<p><strong>That&#39;s it!</strong></p>
+<h2 id='development'>Development</h2><h3 id='docker'>Docker</h3>
+<p>If you are using Docker, Bellona comes with a <code>Dockerfile</code> and a <code>docker-compose.yml</code> file for serving your application. Run <code>docker-compose up -d</code> after setup to serve your application to port 80, and <a href="https://www.adminer.org/">Adminer</a> on port 8080. You can seed your database by adding <code>SQL</code> to the <code>database/seed.sql</code> file.</p>
+<h1 id='directory-structure'>Directory Structure</h1><h2 id='app'>app</h2>
+<p>The <code>app</code> directory is where the majority of your development time will be spent, since it contains all of your own controllers, models, views, middleware, libraries, and services.</p>
 
-<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="o">.</span><span class="n">kittens</span><span class="o">.</span><span class="n">get</span><span class="p">()</span>
-</code></pre><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://example.com/api/kittens"</span>
-  -H <span class="s2">"Authorization: meowmeowmeow"</span>
-</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'kittn'</span><span class="p">);</span>
+<ul>
+<li><code>app/controllers</code> contains all of your controller classes. As with all of your class files, each file should be named the same as the the class it contains, starting with an uppercase letter. E.g. <code>Home.php</code> would contain the <code>Home</code> controller. You may also nest your controllers into subdirectories within the <code>app/controllers</code> directory, so long as your routes reflect this nesting.</li>
+<li><code>app/models</code> contains all of your models. They should be named in the same fashion as your <code>app/controllers</code> files and can be similarly nested within subdirectories.</li>
+<li><code>app/views</code> contains all of your views.</li>
+<li><code>app/middleware</code> contains all of your middleware.</li>
+<li><code>app/policies</code> contains all of your authorization policies.</li>
+<li><code>app/providers</code> provides a convenient place to store your service providers. However, you may place your service providers wherever you want, as long as you list them appropriately in the <code>public/index.php</code> file.</li>
+<li><code>app/facades</code> contains all of your facades, though you may choose to put these wherever you like.</li>
+<li><code>app/lib</code> contains any libraries you might wish to create, though you are free to create these any place you desire.</li>
+<li><code>app/helpers</code> contains any helper classes/functoins you might wish to create, though you can place these wherever you like.</li>
+</ul>
+<h2 id='config'>config</h2>
+<p>The <code>config</code> contains all of your configuration settings, divided into separate files for each configuration. Note that many of these settings are loaded directly from the <code>.env</code> file in your project root directory, so should be changed there.</p>
 
-<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">);</span>
-<span class="kd">let</span> <span class="nx">kittens</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">kittens</span><span class="p">.</span><span class="nx">get</span><span class="p">();</span>
-</code></pre>
-<blockquote>
-<p>The above command returns JSON structured like this:</p>
-</blockquote>
-<pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
-  </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Fluffums"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"calico"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"fluffiness"</span><span class="p">:</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"cuteness"</span><span class="p">:</span><span class="w"> </span><span class="mi">7</span><span class="w">
-  </span><span class="p">},</span><span class="w">
-  </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Max"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"unknown"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"fluffiness"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"cuteness"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="w">
-  </span><span class="p">}</span><span class="w">
-</span><span class="p">]</span><span class="w">
-</span></code></pre>
-<p>This endpoint retrieves all kittens.</p>
-<h3 id='http-request'>HTTP Request</h3>
-<p><code>GET http://example.com/api/kittens</code></p>
-<h3 id='query-parameters'>Query Parameters</h3>
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Default</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>include_cats</td>
-<td>false</td>
-<td>If set to true, the result will also include cats.</td>
-</tr>
-<tr>
-<td>available</td>
-<td>true</td>
-<td>If set to false, the result will include kittens that have already been adopted.</td>
-</tr>
-</tbody></table>
+<ul>
+<li><code>config/index.php</code> contains the main configuration settings for your site, including file and URL paths.</li>
+<li><code>config/session.php</code> contains configuration settings for user sessions, including which driver you wish to use.</li>
+<li><code>config/auth.php</code> contains configuration settings for authentication, including which driver you wish to use.</li>
+<li><code>config/middleware.php</code> contains an array of middleware you wish make available to your application, where the keys are the names you wish to assign and the values are the fully-namespaced class names of the middleware classes themselves.</li>
+</ul>
 
-<aside class="success">
-Remember — a happy kitten is an authenticated kitten!
-</aside>
-<h2 id='get-a-specific-kitten'>Get a Specific Kitten</h2><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
+<p>If you wish to store your own configuration settings, you are free to do so in the <code>config/index.php</code> file, or use this file to include other configuration files you may wish to create.</p>
+<h2 id='public'>public</h2>
+<p>The <code>public</code> directory contains all of the assets that should be available publicly to the request client (i.e. user&#39;s browser), including any JavaScript files, CSS, images, and uploads. Other than the <code>index.php</code> file and the <code>.htaccess</code> file, you are free to arrange these public assets in any way you like.</p>
 
-<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="p">.</span><span class="nf">kittens</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">kittn</span>
+<ul>
+<li><code>public/index.php</code> is the main PHP file through which all of the incoming requests to your site are directed, and bootstraps your entire application.</li>
+<li><code>public/.htaccess</code> rewrites the incoming request URL so that all requests, other than those for existing files (e.g. public images), are directed to the <code>public/index.php</code> file.</li>
+</ul>
+<h2 id='resources'>resources</h2>
+<p>The <code>resources</code> directory is completely optional but provides a convenient place to place any build assets that have to be bundled before being placed into the <code>public</code> directory.</p>
+<h2 id='routes'> routes</h2>
+<p>The <code>routes</code> directory contains all of the endpoints to which your application can respond.</p>
 
-<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="o">.</span><span class="n">kittens</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</code></pre><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://example.com/api/kittens/2"</span>
-  -H <span class="s2">"Authorization: meowmeowmeow"</span>
-</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'kittn'</span><span class="p">);</span>
+<ul>
+<li><code>routes/web.php</code> contains all of your regular endpoints to which your application responds with regular HTML output.</li>
+<li><code>routes/api.php</code> contains all of your API endpoints. These are automatically prefixed with <code>/api</code> when they are loaded by the <code>Bellona/Http/Router</code>.</li>
+</ul>
+<h2 id='storage'>storage</h2>
+<p>The <code>storage</code> directory provides a place where you application will automatically store files such as cached HTML output or encryption keys.</p>
 
-<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">);</span>
-<span class="kd">let</span> <span class="nx">max</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">kittens</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
-</code></pre>
-<blockquote>
-<p>The above command returns JSON structured like this:</p>
-</blockquote>
-<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Max"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"unknown"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"fluffiness"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"cuteness"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre>
-<p>This endpoint retrieves a specific kitten.</p>
+<ul>
+<li><code>storage/cache</code> contains all your cached HTML output.</li>
+</ul>
+<h2 id='env'>.env</h2>
+<p>The <code>.env.example</code> file in your project root directory contains all of the environment variables which will be loaded by the application. This should be renamed to <code>.env</code> and never commited to a public version control repository, so is listed in the <code>.gitignore</code> file by default.</p>
+<h2 id='dockerfile-and-docker-compose-yml'>Dockerfile and docker-compose.yml</h2>
+<p>These are convenient, pre-built files for Docker users, suitable for development.</p>
+<h2 id='htaccess'>.htaccess</h2>
+<p>The <code>.htaccess</code> file in your project root directory directs all incoming requests into the <code>public</code> directory (where it is further directed to the <code>public/index.php</code> file by the <code>public/.htaccess</code> file).</p>
+<h2 id='composer-json'>composer.json</h2>
+<p>The <code>composer.json</code> file specifies all of your project&#39;s dependencies, as well as configuring the vendor autoloader.</p>
+<h1 id='architecture'>Architecture</h1><h2 id='the-request-lifecycle'>The Request Lifecycle</h2>
+<p>Each and every incoming request which hits your app is directed to the <code>public/index.php</code> file by way of <code>.htaccess</code> files.</p>
 
-<aside class="warning">Inside HTML code blocks like this one, you can't use Markdown, so use <code>&lt;code&gt;</code> blocks to denote code.</aside>
-<h3 id='http-request-2'>HTTP Request</h3>
-<p><code>GET http://example.com/kittens/&lt;ID&gt;</code></p>
-<h3 id='url-parameters'>URL Parameters</h3>
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>ID</td>
-<td>The ID of the kitten to retrieve</td>
-</tr>
-</tbody></table>
-<h2 id='delete-a-specific-kitten'>Delete a Specific Kitten</h2><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
+<p>This file first loads the vendor autoloader, then your environment variables, and then your main configuration settings from your <code>config/index.php</code> file. Next, a number of convenient class aliases are setup for use within your views, before the app itself is booted. An array of <code>Service Provider</code> class names specifies which service providers your application should have access to, and are consequently loaded by the <code>Service Container</code>. At this point, the app has been &quot;booted&quot;.</p>
 
-<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="p">.</span><span class="nf">kittens</span><span class="p">.</span><span class="nf">delete</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">kittn</span>
+<p>Next, the request itself is handled by the <code>Bellona\Http\Router</code>, which loads your routes and finds the one which matches the incoming request, runs any middleware specified for that route, and finally runs the callback specified for your route. The <code>Bellona\Http\Router</code> also takes care of resolving any services that you have type-hinted in your route middleware or callback from the container and injects them automatically for you.</p>
+<h2 id='the-service-container'>The Service Container</h2>
+<p>All of Bellona&#39;s core services are registered with the <code>Service Container</code>, which is really just the <code>Bellona\Core\Application</code> itself. Many of these services are deferred, meaning they are registered but not loaded immediately; rather, they are only loaded when required.</p>
 
-<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="o">.</span><span class="n">kittens</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</code></pre><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://example.com/api/kittens/2"</span>
-  -X DELETE
-  -H <span class="s2">"Authorization: meowmeowmeow"</span>
-</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'kittn'</span><span class="p">);</span>
+<p>You are encouraged to register your own services with the container by writing your own <code>Service Provider</code> or using the <code>App\Providers\AppServiceProvider</code> which comes with Bellona out-of-the-box.</p>
 
-<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">);</span>
-<span class="kd">let</span> <span class="nx">max</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">kittens</span><span class="p">.</span><span class="k">delete</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
-</code></pre>
-<blockquote>
-<p>The above command returns JSON structured like this:</p>
-</blockquote>
-<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"deleted"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">":("</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre>
-<p>This endpoint deletes a specific kitten.</p>
-<h3 id='http-request-3'>HTTP Request</h3>
-<p><code>DELETE http://example.com/kittens/&lt;ID&gt;</code></p>
-<h3 id='url-parameters-2'>URL Parameters</h3>
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>ID</td>
-<td>The ID of the kitten to delete</td>
-</tr>
-</tbody></table>
-<h1 id='errors'>Errors</h1>
 <aside class="notice">
-This error section is stored in a separate file in <code>includes/_errors.md</code>. Slate allows you to optionally separate out your docs into many files...just save them to the <code>includes</code> folder and add them to the top of your <code>index.md</code>'s frontmatter. Files are included in the order listed.
+  Services are just classes which provide some key functionality to your application. For example, Bellona provides an <code>Encryptor</code> class for providing an encryption service, a <code>Cookie</code> class for providing a service to easily get/set cookies, etc.
 </aside>
 
-<p>The Kittn API uses the following error codes:</p>
+<p>Registering services with the container, as opposed to using classes in the usual way, provides a number of benefits:</p>
 
-<table><thead>
-<tr>
-<th>Error Code</th>
-<th>Meaning</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>400</td>
-<td>Bad Request -- Your request is invalid.</td>
-</tr>
-<tr>
-<td>401</td>
-<td>Unauthorized -- Your API key is wrong.</td>
-</tr>
-<tr>
-<td>403</td>
-<td>Forbidden -- The kitten requested is hidden for administrators only.</td>
-</tr>
-<tr>
-<td>404</td>
-<td>Not Found -- The specified kitten could not be found.</td>
-</tr>
-<tr>
-<td>405</td>
-<td>Method Not Allowed -- You tried to access a kitten with an invalid method.</td>
-</tr>
-<tr>
-<td>406</td>
-<td>Not Acceptable -- You requested a format that isn&#39;t json.</td>
-</tr>
-<tr>
-<td>410</td>
-<td>Gone -- The kitten requested has been removed from our servers.</td>
-</tr>
-<tr>
-<td>418</td>
-<td>I&#39;m a teapot.</td>
-</tr>
-<tr>
-<td>429</td>
-<td>Too Many Requests -- You&#39;re requesting too many kittens! Slow down!</td>
-</tr>
-<tr>
-<td>500</td>
-<td>Internal Server Error -- We had a problem with our server. Try again later.</td>
-</tr>
-<tr>
-<td>503</td>
-<td>Service Unavailable -- We&#39;re temporarily offline for maintenance. Please try again later.</td>
-</tr>
-</tbody></table>
+<ul>
+<li>You can configure service providers such that the dependencies of your services are automatically taken care of by the service container.</li>
+<li>You can easily register singletons with the container so that the same instance is supplied each time you resolve a service from the container.</li>
+<li>Your services can be automatically injected into your controller methods as well as your middleware (dependency injection).</li>
+</ul>
+<h3 id='registering-your-own-services'>Registering your own services.</h3>
+<blockquote>
+<p>An example of registering a (deferred) service that can be used to purify dynamic HTML before outputting it:</p>
+</blockquote>
+<pre class="highlight php tab-php"><code><span class="cp">&lt;?php</span>
 
+<span class="k">namespace</span> <span class="nx">App\Providers</span><span class="p">;</span>
+
+<span class="k">use</span> <span class="nx">Bellona\Support\ServiceProvider</span><span class="p">;</span>
+
+<span class="k">class</span> <span class="nc">PurifierServiceProvider</span> <span class="k">extends</span> <span class="nx">ServiceProvider</span>
+<span class="p">{</span>
+    <span class="k">public</span> <span class="nv">$defer</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+
+    <span class="k">public</span> <span class="nv">$services</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'purifier'</span><span class="p">];</span>
+
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">register</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">app</span><span class="o">-&gt;</span><span class="na">singleton</span><span class="p">(</span><span class="s1">'purifier'</span><span class="p">,</span> <span class="k">function</span><span class="p">(</span><span class="nv">$app</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nv">$config</span> <span class="o">=</span> <span class="nx">\HTMLPurifier_Config</span><span class="o">::</span><span class="na">createDefault</span><span class="p">();</span>
+            <span class="k">return</span> <span class="k">new</span> <span class="nx">\HTMLPurifier</span><span class="p">(</span><span class="nv">$config</span><span class="p">);</span>
+        <span class="p">});</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+<p>To register your own service with the container, you would either create your own <code>Service Provider</code> or use the <code>App\Providers\AppServiceProvider</code> which comes with Bellona out-of-the-box.</p>
+
+<p>A <code>Service Provider</code> is a class which extends <code>Bellona\Support\ServiceProvider</code> and specifies a <code>Bellona\Support\ServiceProvider::register()</code> method. This is called automatically by the application when it boots and should register services by way of either the <code>Bellona\Core\Application::bind()</code> method or the <code>Bellona\Core\Application::singleton()</code> method.</p>
+
+<p><code>Bellona\Core\Application::bind()</code> will ensure that a new instance of your service is created each time you resolve it from the container, whereas <code>Bellona\Core\Application::singleton()</code> will ensure that the same instance is returned each time. You can access the <code>Bellona\Core\Application</code> instance as an inherited property from the <code>Bellona\Support\ServiceProvider</code>.</p>
+
+<p>Both the <code>Bellona\Core\Application::bind()</code> and the <code>Bellona\Core\Application::singleton()</code> methods accept the name of the service you wish to register as the first argument, and a callback function as the second argument. The service container is automatically passed to this callback function so you can resolve any other services on which your own service is dependent, and should return an instance of your service.</p>
+
+<p>If you wish to defer a service, so that it only loads when you require it, simply set a public <code>$defer</code> boolean property and set it as <code>true</code>, as well as a public <code>$services</code> array property which specifies the name of the services your provider provides.</p>
+
+<p>After setting up your service provider (and the service itself), you should list the fully-namespaced name of the service provider class in the <code>$serviceProviders</code> array, within the <code>public/index.php</code> file. This will ensure that the service container knows about your service provider and so can be sure to load it when the application boots on each request.</p>
+
+<aside class="notice">
+  You should make sure that no two of your services are dependent on each other for their <code>__construct</code> method, otherwise the container won't be able to resolve them since they each need to be resolved before the other dependent service can be resolved, causing an infinite recursion error. Note that this only applies in the construction of a service; any services can be safely resolved within other methods.
+</aside>
+<h3 id='resolving-services-from-the-container'> Resolving services from the container</h3><pre class="highlight php tab-php"><code><span class="cp">&lt;?php</span>
+
+<span class="c1">// Get the container instance.
+</span><span class="nv">$app</span> <span class="o">=</span> <span class="nx">Bellona\Core\Application</span><span class="o">::</span><span class="na">getInstance</span><span class="p">();</span>
+
+<span class="c1">// Resolve the 'purifier' service.
+</span><span class="nv">$purifier</span> <span class="o">=</span> <span class="nv">$app</span><span class="o">-&gt;</span><span class="na">resolve</span><span class="p">(</span><span class="s1">'purifier'</span><span class="p">);</span>
+
+<span class="c1">// Alternatively:
+</span><span class="nv">$purifier</span> <span class="o">=</span> <span class="nv">$app</span><span class="p">[</span><span class="s1">'purifier'</span><span class="p">];</span>
+
+<span class="c1">// Or:
+</span><span class="nv">$purifier</span> <span class="o">=</span> <span class="nx">app</span><span class="p">(</span><span class="s1">'purifier'</span><span class="p">);</span>
+</code></pre>
+<p>In order to resolve a service from the container, you will first need a reference to the container instance using <code>$app = Bellona\Core\Application::getInstance()</code>. Then you can either call the <code>$app-&gt;resolve($serviceName)</code> instance method, specifying the name of the service you wish to resolve as an argument, or use array notation like so: <code>$app[$serviceName]</code>.</p>
+
+<p>Alternatively, Bellona provides a convenience function to more easily resolve services: <code>app($serviceName)</code>.</p>
+<h2 id='facades'>Facades</h2>
+<blockquote>
+<p>Below is the source code for the <code>Bellona\Support\Facades\Encrypt</code> facade.</p>
+</blockquote>
+<pre class="highlight php tab-php"><code><span class="cp">&lt;?php</span>
+
+<span class="k">namespace</span> <span class="nx">Bellona\Support\Facades</span><span class="p">;</span>
+
+<span class="k">use</span> <span class="nx">Bellona\Encryption\Encryptor</span><span class="p">;</span>
+
+<span class="k">class</span> <span class="nc">Encrypt</span> <span class="k">extends</span> <span class="nx">Facade</span>
+<span class="p">{</span>
+  <span class="k">protected</span> <span class="k">static</span> <span class="nv">$service</span> <span class="o">=</span> <span class="nx">Encryptor</span><span class="o">::</span><span class="na">class</span><span class="p">;</span>
+<span class="p">}</span>
+
+</code></pre>
+<blockquote>
+<p>This allows you to use instance methods of the <code>Bellona\Encryption\Encryptor</code> class as static methods of the corresponding facade:</p>
+</blockquote>
+<pre class="highlight php tab-php"><code><span class="cp">&lt;?php</span>
+
+<span class="nv">$encrypted</span> <span class="o">=</span> <span class="nx">Bellona\Support\Facades\Encrypt</span><span class="o">::</span><span class="na">encryptString</span><span class="p">(</span><span class="s1">'secretmessage'</span><span class="p">);</span>
+
+</code></pre>
+<blockquote>
+<p>This provides a much more readable syntax to the following, which is equivalent:</p>
+</blockquote>
+<pre class="highlight php tab-php"><code><span class="cp">&lt;?php</span>
+
+<span class="nv">$encrypted</span> <span class="o">=</span> <span class="nx">app</span><span class="p">(</span><span class="s1">'Bellona\Encryption\Encryptor'</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">encryptString</span><span class="p">(</span><span class="s1">'secretmessage'</span><span class="p">);</span>
+
+</code></pre>
+<p>Facades are simply &quot;proxy&quot; classes which defer your static method calls to instance methods of a service registered with the container.</p>
+
+<p>To create a <code>Facade</code>, simply extend the <code>Bellona\Support\Facade</code> class and define a public static property <code>$service</code> whose value is the name of the service you wish to proxy. Then, all static calls to this facade will be automatically redirected to your the corresponding instance methods on service using the dynamic <code>Bellona\Support\Facade::__callStatic()</code> function.</p>
+<h1 id='routing'>Routing</h1><h2 id='defining-routes'>Defining routes</h2><pre class="highlight php tab-php"><code><span class="cp">&lt;?php</span>
+
+<span class="c1">// Register a route to listen to GET requests to the /about endpoint,
+// and handle the response with an anonymous function:
+</span><span class="nx">Router</span><span class="o">::</span><span class="na">get</span><span class="p">(</span><span class="s1">'/about'</span><span class="p">,</span> <span class="k">function</span><span class="p">()</span> <span class="p">{</span>
+  <span class="k">echo</span> <span class="s1">'This is the about page.'</span><span class="p">;</span>
+<span class="p">});</span>
+
+<span class="c1">// Register a route to listen to POST requests to the /about endpoint,
+// and handle the response in the about method of the Home controller:
+</span><span class="nx">Router</span><span class="o">::</span><span class="na">post</span><span class="p">(</span><span class="s1">'/about'</span><span class="p">,</span> <span class="s1">'Home@about'</span><span class="p">);</span>
+
+<span class="c1">// PUT, PATCH, and DELETE routes work in the same way:
+</span><span class="nx">Router</span><span class="o">::</span><span class="na">put</span><span class="p">(</span><span class="s1">'/posts'</span><span class="p">,</span> <span class="s1">'Posts@update'</span><span class="p">);</span>
+<span class="nx">Router</span><span class="o">::</span><span class="na">patch</span><span class="p">(</span><span class="s1">'/posts'</span><span class="p">,</span> <span class="s1">'Posts@edit'</span><span class="p">);</span>
+<span class="nx">Router</span><span class="o">::</span><span class="na">delete</span><span class="p">(</span><span class="s1">'/posts'</span><span class="p">,</span> <span class="s1">'Posts@delete'</span><span class="p">);</span>
+
+<span class="c1">// Listen for all HTTP verbs:
+</span><span class="nx">Router</span><span class="o">::</span><span class="na">all</span><span class="p">(</span><span class="s1">'/users'</span><span class="p">,</span> <span class="k">function</span><span class="p">()</span> <span class="p">{</span>
+  <span class="c1">// ...
+</span><span class="p">});</span>
+
+<span class="c1">// Listen for multiple specific verbs:
+</span><span class="nx">Router</span><span class="o">::</span><span class="na">match</span><span class="p">([</span><span class="s1">'PUT'</span><span class="p">,</span> <span class="s1">'PATCH'</span><span class="p">],</span> <span class="s1">'/users'</span><span class="p">,</span> <span class="k">function</span><span class="p">()</span> <span class="p">{</span>
+  <span class="c1">// ...
+</span><span class="p">});</span>
+
+</code></pre>
+<p>All of your routes should be registered within the <code>routes</code> directory. If you wish to register an API route, do so within the <code>routes/api.php</code> file; otherwise, use the <code>routes/web.php</code> file.</p>
+
+<p>Routes for each verb can be defined by calling the relevent method on the <code>Bellona\Http\Router</code>. Note that an alias has been set up for the <code>Bellona\Support\Facades\Router</code> facade, so that you do not have to use the full namespace within your route files.</p>
+
+<p>The <code>Bellona\Http\Router</code> has a number of methods pertaining to each HTTP verb you wish to register a route for. For example, the <code>Bellona\Http\Router::get()</code> is used to registed a route for GET requests to a specific endpoint and accepts two parameters: a URL defining the endpoint to which the route should be registered, and a callback.</p>
+
+<p>The callback can either be anonymous function to run if the route matches the incoming request, or an action (method) to call on a specific controller in the format <code>&#39;ControllerName@action&#39;</code>. Bellona will look for your controller inside of the <code>app/controllers</code> directory. If it is nested within a subdirectory thereof, simply specify its namespace relative to the <code>app/controllers</code> directory like so: <code>Path\To\Class</code>.</p>
+
+<p>In addition to a <code>get()</code> method on the <code>Bellona\Http\Router</code>, there is also a <code>post()</code>, <code>put()</code>, <code>patch()</code>, and <code>delete()</code> method which all work in the same way.</p>
+
+<p>If you wish to assign a route to all HTTP verbs, you can use the <code>Bellona\Http\Router::all()</code> method, which accepts the same parameters as <code>Bellona\Http\Router::get()</code>.</p>
+
+<p>If you wish to assign a route to multiple HTTP verbs at once (but not all), you can use the <code>Bellona\Http\Router::match()</code> method, which accepts an array of verbs (<code>&#39;GET&#39;</code>, <code>&#39;POST&#39;</code>, <code>&#39;PUT&#39;</code>, <code>&#39;PATCH&#39;</code>, or <code>&#39;DELETE&#39;</code>) as the first argument, in addition to the URL and the callback as second and third arguments respectively.</p>
+
+<p>An individual <code>Bellona\Http\Route</code> instance is returned by each of these methods, allowing your to chain on calls to set middleware and custom regex patterns if you wish.</p>
+
+<aside class="notice">
+  The order in which you define your routes is important, since only the first matched route will be called.
+</aside>
+<h2 id='route-parameters'>Route parameters</h2><pre class="highlight php tab-php"><code><span class="cp">&lt;?php</span>
+
+<span class="nx">Router</span><span class="o">::</span><span class="na">get</span><span class="p">(</span><span class="s1">'/posts/{id}'</span><span class="p">,</span> <span class="k">function</span><span class="p">(</span><span class="nv">$id</span><span class="p">)</span> <span class="p">{</span>
+  <span class="c1">// Display the post with id = $id...
+</span><span class="p">});</span>
+
+<span class="nx">Router</span><span class="o">::</span><span class="na">get</span><span class="p">(</span><span class="s1">'/posts/author/{id}/page/{page}'</span><span class="p">,</span> <span class="k">function</span><span class="p">(</span><span class="nv">$authorId</span><span class="p">,</span> <span class="nv">$pageNumber</span><span class="p">)</span> <span class="p">{</span>
+  <span class="c1">// Display the $pageNumber'th page of all posts by author with id = $authorID...
+</span><span class="p">});</span>
+
+</code></pre>
+<p>Rather than specifying exact URL endpoints, you can also specify a parameter using curly braces. These parameters will be automatically passed to your callback in the order they are defined. Therefore, the name of your callback arguments which are not type-hinted do not have to match the name of the parameters defined in the URL.</p>
+<h3 id='custom-regex'>Custom regex</h3><pre class="highlight php tab-php"><code><span class="cp">&lt;?php</span>
+
+<span class="c1">// Ensure the {id} parameter only matches numbers.
+</span><span class="nx">Router</span><span class="o">::</span><span class="na">get</span><span class="p">(</span><span class="s1">'/posts/{id}'</span><span class="p">,</span> <span class="s1">'Posts@show'</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">where</span><span class="p">(</span><span class="s1">'id'</span><span class="p">,</span> <span class="s1">'[0-9]+'</span><span class="p">);</span>
+
+<span class="c1">// Ensure both the {id} and the {page} parameters only match numbers.
+</span><span class="nx">Router</span><span class="o">::</span><span class="na">get</span><span class="p">(</span><span class="s1">'/posts/author/{id}/page/{page}'</span><span class="p">,</span> <span class="s1">'Posts@author'</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">where</span><span class="p">([</span>
+  <span class="s1">'id'</span> <span class="o">=&gt;</span> <span class="s1">'[0-9]+'</span><span class="p">,</span>
+  <span class="s1">'page'</span> <span class="o">=&gt;</span> <span class="s1">'[0-9]+'</span>
+<span class="p">]);</span>
+
+</code></pre>
+<p>By default each parameter in your URL is replaced with the simple regex pattern <code>(\w+)</code>. If you wish to impose your own regex, for example to ensure an <code>{id}</code> parameter only matches numbers, you can do so with the <code>Bellona\Http\Route::where()</code> instance method.</p>
+<h2 id='dependency-injection-amp-implicit-model-binding'>Dependency injection &amp; implicit model binding</h2><pre class="highlight php tab-php"><code><span class="cp">&lt;?php</span>
+
+<span class="nx">Router</span><span class="o">::</span><span class="na">get</span><span class="p">(</span><span class="s1">'/posts/{post}'</span><span class="p">,</span> <span class="k">function</span><span class="p">(</span><span class="nx">Bellona\Http\Request</span> <span class="nv">$request</span><span class="p">,</span> <span class="nx">App\Models\Post</span> <span class="nv">$post</span><span class="p">)</span> <span class="p">{</span>
+  <span class="c1">// $request will be the resolved Bellona\Http\Request instance.
+</span>  <span class="c1">// $post will be the App\Models\Post whose primary key is {post}.
+</span><span class="p">});</span>
+
+</code></pre>
+<p>The <code>Bellona\Http\Router</code> will attempt to resolve any type-hinted parameters specified in your callback before calling it. If the callback parameter has the same name as one of your URL parameters, it will assume you are expecting a database record and will attempt to find it according to its primary key, where the model it will look for is determined by the name of the type-hinted class, and where the primary key is the value found in the URL. This is implicit model binding. Otherwise, it will assume you wish to resolve a service from the service container and attempt to do so automatically. This is dependency injection.</p>
+
+<aside class="notice">
+  If a type-hinted parameter can't be resolved, or the incoming request URL does not match any registered route, Bellona with exit with a 404 response. The 404 page displayed to the user can be modified by editing the <code>app/views/404.php</code> file.
+</aside>
+<h1 id='middleware'>Middleware</h1><h2 id='creating-middleware'>Creating middleware</h2><pre class="highlight php tab-php"><code><span class="cp">&lt;?php</span>
+
+<span class="k">namespace</span> <span class="nx">App\Middleware</span><span class="p">;</span>
+
+<span class="k">class</span> <span class="nc">Admin</span>
+<span class="p">{</span>
+  <span class="k">public</span> <span class="k">function</span> <span class="nf">run</span><span class="p">(</span><span class="nv">$request</span><span class="p">)</span>
+  <span class="p">{</span>
+    <span class="c1">// Ensure user is logged in and is an admin user,
+</span>    <span class="c1">// otherwise redirect...
+</span>  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+<p>To create middleware, you should create a class in the <code>App\Middleware</code> namespace and define a <code>run()</code> method. This will be called automatically before the callback for your matching route, allowing you to easily implement authentication, authorization, CSRF protection, etc. The <code>Bellona\Http\Request</code> instance will automatically be passed as the first parameter.</p>
+<h2 id='using-middleware'>Using middleware</h2><pre class="highlight php tab-php"><code><span class="cp">&lt;?php</span>
+
+<span class="c1">// Specify the 'auth' middleware to run before allowing a user to create a new post.
+</span><span class="nx">Router</span><span class="o">::</span><span class="na">post</span><span class="p">(</span><span class="s1">'/posts/{post}'</span><span class="p">,</span> <span class="s1">'Posts@create'</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">middleware</span><span class="p">(</span><span class="s1">'auth'</span><span class="p">);</span>
+</code></pre>
+<blockquote>
+<p>The <code>auth</code> middleware should be mapped to the name of the corrseponding middleware class in your <code>config/middleware.php</code> array:</p>
+</blockquote>
+<pre class="highlight php tab-php"><code><span class="cp">&lt;?php</span>
+
+<span class="k">return</span> <span class="p">[</span>
+  <span class="s1">'auth'</span> <span class="o">=&gt;</span> <span class="nx">App\Middleware\Authenticate</span><span class="o">::</span><span class="na">class</span><span class="p">,</span>
+  <span class="c1">// ...
+</span><span class="p">];</span>
+
+</code></pre>
+<p>You can specify middleware for an individual route with the <code>Bellona\Http\Route::middleware()</code> instance method. This accepts any number of strings of the format <code>name:arg1,arg2...</code>, where <code>name</code> is the name of the middleware specified as a key in your <code>config/middleware.php</code> file, and <code>arg1</code> and <code>arg2</code> are any arguments required by your middleware. If no arguments are required, simply exclude them (leaving just <code>name</code>).</p>
+
+<p>If you wish to define middleware for every method in your controller, you can do so using the <code>Bellona\Http\Controller::middleware()</code> method, which works in the same way but applies to all methods in your controller.</p>
+<h2 id='implicit-model-binding'>Implicit model binding</h2><pre class="highlight php tab-php"><code><span class="cp">&lt;?php</span>
+
+<span class="nx">Router</span><span class="o">::</span><span class="na">get</span><span class="p">(</span><span class="s1">'/posts/{post}'</span><span class="p">,</span> <span class="s1">'Posts@show'</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">middleware</span><span class="p">(</span><span class="s1">'posts:post'</span><span class="p">);</span>
+</code></pre>
+<blockquote>
+<p>This will pass the URL parameter typed in by the user and captured in the {post} parameter into your middleware, where you can (optionally) type-hint the appropriate model so that it is passed in automatically:</p>
+</blockquote>
+<pre class="highlight php tab-php"><code><span class="cp">&lt;?php</span>
+
+<span class="k">class</span> <span class="nc">PostsMiddleware</span>
+<span class="p">{</span>
+  <span class="k">public</span> <span class="k">function</span> <span class="nf">run</span><span class="p">(</span><span class="nv">$request</span><span class="p">,</span> <span class="nx">App\Models\Post</span> <span class="nv">$post</span><span class="p">)</span>
+  <span class="p">{</span>
+    <span class="c1">// Decide whether to allow access to the post or not...
+</span>  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+<p>You can use implicit model binding by passing the name of the URL parameter corresponding to your model as an argument to your middleware and type-hinting the model in the middleware function definition.</p>
+<h2 id='available-middleware'>Available middleware</h2><h3 id='csrf'>CSRF</h3>
+<p>The <code>App\Middleware\CSRF</code> middleware is called automatically when the incoming request is anything other than a <code>GET</code> request. This will provide protection against CSRF attacks by using the <code>Bellona\Security\CSRF</code> class to require that a valid token by passed either as part of the request body, or as a <code>X-CSRF-TOKEN</code> header.</p>
+
+<p>By default, if a valide token is not found, the middleware will flash an alert message to the session, save the request data, and redirect back to the previous page. You can modify this behaviour by modifying the <code>App\Middleware\CSRF::deny()</code> method.</p>
+<h3 id='authentication'>Authentication</h3>
+<blockquote>
+<p>Ensure the user is logged in before allowing them to create a new post:</p>
+</blockquote>
+<pre class="highlight php tab-php"><code><span class="cp">&lt;?php</span>
+
+<span class="nx">Router</span><span class="o">::</span><span class="na">post</span><span class="p">(</span><span class="s1">'/posts'</span><span class="p">,</span> <span class="s1">'Posts@create'</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">middleware</span><span class="p">(</span><span class="s1">'auth'</span><span class="p">);</span>
+</code></pre>
+<p>The <code>App\Middleware\Authenticate</code> middleware uses the <code>Bellona\Auth\Authenticaiton</code> class to require that a user is logged in.</p>
+
+<p>By default, if the user is not logged in, an alert message will be flashed to the session and redirect to the <code>URL_ROOT</code>. You can modify this behaviour by modifying the <code>App\Middleware\Authenticate::deny()</code> method.</p>
+<h3 id='authorization'>Authorization</h3>
+<blockquote>
+<p>Ensure a user is authorized to edit a post:</p>
+</blockquote>
+<pre class="highlight php tab-php"><code><span class="cp">&lt;?php</span>
+
+<span class="nx">Router</span><span class="o">::</span><span class="na">put</span><span class="p">(</span><span class="s1">'/post/{post}'</span><span class="p">,</span> <span class="s1">'Posts@edit'</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">middleware</span><span class="p">(</span><span class="s1">'can:edit,post'</span><span class="p">);</span>
+</code></pre>
+<p>The <code>App\Middleware\Authorize</code> middleware requires that the user is logged in and is authorized to perform a given action on a specific model. The name of the action and the model should be passed in as arguments.</p>
+
+<p>To perform this check, <code>App\Middleware\Authorize</code> uses the <code>can()</code> helper, which in turn calls the appropriate method on the appropriate <code>Policy</code>.</p>
+<h1 id='authorization'>Authorization</h1>
+<p>Authorization is the process by which you ensure that the user has the permisson to perform a given action on a specific database model, for example creating a new post or editing an existing one.</p>
+
+<p>In Bellona, this is done by creating policies.</p>
+<h2 id='creating-policies'>Creating policies</h2>
+<blockquote>
+<p>Create a policy for editing a post:</p>
+</blockquote>
+<pre class="highlight php tab-php"><code><span class="cp">&lt;?php</span>
+
+<span class="k">namespace</span> <span class="nx">App\Policies</span><span class="p">;</span>
+
+<span class="k">use</span> <span class="nx">App\Models\User</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">App\Models\Post</span><span class="p">;</span>
+
+<span class="k">class</span> <span class="nc">PostPolicy</span>
+<span class="p">{</span>
+  <span class="k">public</span> <span class="k">function</span> <span class="nf">edit</span><span class="p">(</span><span class="nx">User</span> <span class="nv">$user</span><span class="p">,</span> <span class="nx">Post</span> <span class="nv">$post</span><span class="p">)</span>
+  <span class="p">{</span>
+    <span class="k">return</span> <span class="nv">$user</span><span class="o">-&gt;</span><span class="na">id</span> <span class="o">===</span> <span class="nv">$post</span><span class="o">-&gt;</span><span class="na">user_id</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+<blockquote>
+<p>Use the policy to authorize user permissions:</p>
+</blockquote>
+<pre class="highlight php tab-php"><code><span class="cp">&lt;?php</span>
+
+<span class="nx">Router</span><span class="o">::</span><span class="na">put</span><span class="p">(</span><span class="s1">'/posts/{post}'</span><span class="p">,</span> <span class="k">function</span><span class="p">(</span><span class="nx">App\Models\Post</span> <span class="nv">$post</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">if</span> <span class="p">(</span><span class="nx">can</span><span class="p">(</span><span class="s1">'edit'</span><span class="p">,</span> <span class="nv">$post</span><span class="p">))</span> <span class="p">{</span>
+    <span class="c1">// Logged in user is authorized to edit the post...
+</span>  <span class="p">}</span>
+<span class="p">});</span>
+</code></pre>
+<blockquote>
+<p>Alternatively, use the <code>App\Middleware\Authorize</code> middleware:</p>
+</blockquote>
+<pre class="highlight php tab-php"><code><span class="cp">&lt;?php</span>
+
+<span class="nx">Router</span><span class="o">::</span><span class="na">put</span><span class="p">(</span><span class="s1">'/posts/{post}'</span><span class="p">,</span> <span class="k">function</span><span class="p">(</span><span class="nx">App\Models\Post</span> <span class="nv">$post</span><span class="p">)</span> <span class="p">{</span>
+  <span class="c1">// Logged in user is authorized to edit the post...
+</span><span class="p">})</span><span class="o">-&gt;</span><span class="na">middleware</span><span class="p">(</span><span class="s1">'can:edit,post'</span><span class="p">);</span>
+</code></pre>
+<p>To create a <code>Policy</code>, create a new class in the <code>App\Policies</code> namespace with the name <code>&lt;Model&gt;Policy</code> where <code>&lt;Model&gt;</code> is the name of the model for which your policies apply. For example, to write any number of policies for the <code>App\Models\Post</code> model, create a <code>App\Policies\PostPolicy</code> class.</p>
+
+<p>Next, create a public method to authorize a specific action. This method should return true only if the user is authorized; otherwise, return false.</p>
+
+<p>Then, use the <code>Bellona\Auth\Authorization::can()</code> method, or the <code>can()</code> helper to check whether or not the user is authorized to perform said action.</p>
+
+<p><code>Bellona\Auth\Authorization::can()</code> accepts three arguments: <code>$action</code>, <code>$model</code>, and <code>$user</code>. <code>$action</code> is the name of the function to call in your <code>Policy</code> class. <code>$model</code> is either the model instance for which to authorize permissions, or, if a specific instance is not required, the name of the model&#39;s class name as a string (e.g. for creating a new <code>App\Models\Post</code>). <code>$user</code> is optional and is the specific user to authorize. If no <code>$user</code> is given, the currently logged in user will be used instead.</p>
+<h1 id='controllers'>Controllers</h1>
+<p>Controllers are classes which handle incoming requests, usually house much of the necessary logic, communicate with a <code>Model</code> to fetch or update data, and return a response in the form of a <code>View</code>.</p>
+<h2 id='creating-controllers'>Creating controllers</h2>
+<blockquote>
+<p>Define a controller and an action to display all posts:</p>
+</blockquote>
+<pre class="highlight php tab-php"><code><span class="cp">&lt;?php</span>
+
+<span class="k">namespace</span> <span class="nx">App\Controllers</span><span class="p">;</span>
+
+<span class="k">use</span> <span class="nx">Bellona\Http\Controller</span><span class="p">;</span>
+
+<span class="k">class</span> <span class="nc">Posts</span> <span class="k">extends</span> <span class="nx">Controller</span>
+<span class="p">{</span>
+  <span class="k">public</span> <span class="k">function</span> <span class="nf">show</span><span class="p">()</span>
+  <span class="p">{</span>
+    <span class="c1">// Display all posts...
+</span>  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+<blockquote>
+<p>Register the controller callback with a route:</p>
+</blockquote>
+<pre class="highlight php tab-php"><code><span class="cp">&lt;?php</span>
+
+<span class="nx">Router</span><span class="o">::</span><span class="na">get</span><span class="p">(</span><span class="s1">'/posts'</span><span class="p">,</span> <span class="s1">'Posts@show'</span><span class="p">);</span>
+</code></pre>
+<p>To create a controller, simply write a new class in the <code>App\Controllers</code> namespace and extend the <code>Bellona\Http\Controller</code>. You can then define methods to respond to the incoming request and register a route to call one of your controller&#39;s methods when it matches the incoming URL.</p>
+
+<p>Extending <code>Bellona\Http\Controller</code> gives you access to the <code>Bellona\Http\Controller::middleware()</code> method, which works the same as the <code>Bellona\Http\Route::middleware()</code> method, except that the middleware is defined for all methods within your controller.</p>
+<h1 id='models'>Models</h1>
+<p>Bellona uses the active record pattern, wherein models are classes whose instances represent a single record in a database. Each column in the database for that record maps to a property on the model instance. The model instance can also have methods which interact with or provide information about the corrseponding database record.</p>
+<h2 id='creating-models'>Creating models</h2><pre class="highlight php tab-php"><code><span class="cp">&lt;?php</span>
+
+<span class="k">namespace</span> <span class="nx">App\Models</span><span class="p">;</span>
+
+<span class="k">use</span> <span class="nx">Bellona\Database\Model</span><span class="p">;</span>
+
+<span class="k">class</span> <span class="nc">Post</span> <span class="k">extends</span> <span class="nx">Model</span>
+<span class="p">{</span>
+  <span class="k">protected</span> <span class="nv">$table</span> <span class="o">=</span> <span class="s1">'posts'</span><span class="p">;</span>
+  <span class="k">protected</span> <span class="nv">$fillable</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'author_id'</span><span class="p">,</span> <span class="s1">'title'</span><span class="p">,</span> <span class="s1">'body'</span><span class="p">];</span>
+<span class="p">}</span>
+</code></pre>
+<p>To create a model, write a new class in the <code>App\Models</code> namespace which extends <code>Bellona\Database\Model</code>. Each model requires a protected <code>$table</code> property, which is the name of the table in your database for which your model represents records. Additionally, each model requires a protected <code>$fillable</code> property if it is to be used to insert/update database records. This should be an array of column names in your database table, listing only the columns which you want to allow your model to update, either with new records or as updates to existing ones. This provides some security against updating a column which you did not intend, either accidentally or through a malicious user.</p>
+<pre class="highlight php tab-php"><code><span class="cp">&lt;?php</span>
+
+<span class="k">namespace</span> <span class="nx">App\Models</span><span class="p">;</span>
+
+<span class="k">use</span> <span class="nx">Bellona\Database\Model</span><span class="p">;</span>
+
+<span class="k">class</span> <span class="nc">Post</span> <span class="k">extends</span> <span class="nx">Model</span>
+<span class="p">{</span>
+  <span class="k">protected</span> <span class="nv">$table</span> <span class="o">=</span> <span class="s1">'posts'</span><span class="p">;</span>
+  <span class="k">protected</span> <span class="nv">$fillable</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'author_id'</span><span class="p">,</span> <span class="s1">'title'</span><span class="p">,</span> <span class="s1">'body'</span><span class="p">];</span>
+  <span class="k">protected</span> <span class="nv">$primaryKey</span> <span class="o">=</span> <span class="s1">'post_id'</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre>
+<aside class="notice">
+  By default Bellona will assume that the primary key for your table is `id`. You can override this by specifying a protected `$primaryKey` property.
+</aside>
+<h2 id='using-models'>Using models</h2><pre class="highlight php tab-php"><code><span class="cp">&lt;?php</span>
+
+<span class="c1">// Save a new post to the database
+</span><span class="nv">$post</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">App\Models\Post</span><span class="p">;</span>
+<span class="nv">$post</span><span class="o">-&gt;</span><span class="na">author_id</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+<span class="nv">$post</span><span class="o">-&gt;</span><span class="na">title</span> <span class="o">=</span> <span class="s1">'Post Title.'</span><span class="p">;</span>
+<span class="nv">$post</span><span class="o">-&gt;</span><span class="na">body</span> <span class="o">=</span> <span class="s1">'Post body...'</span><span class="p">;</span>
+<span class="nv">$post</span><span class="o">-&gt;</span><span class="na">save</span><span class="p">();</span>
+
+<span class="c1">// Update an existing post.
+</span><span class="nv">$post</span><span class="o">-&gt;</span><span class="na">body</span> <span class="o">=</span> <span class="s1">'Updated post body...'</span><span class="p">;</span>
+<span class="nv">$post</span><span class="o">-&gt;</span><span class="na">save</span><span class="p">();</span>
+
+<span class="c1">// Delete an existing post.
+</span><span class="nv">$post</span><span class="o">-&gt;</span><span class="na">delete</span><span class="p">();</span>
+</code></pre>
+<p>To save a model instance to the database, use the <code>Bellona\Database\Model::save()</code> instance method. If the model has a property corresponding to the relevant table&#39;s primary key, Bellona will update the associated record in the database with all your model instance&#39;s properties that are listed in the <code>$fillable</code> array. If the model does not have a primary key, it will create a new record in the database and assign the inserted primary key to your model instance.</p>
+
+<p>To delete a record associated with a model instance, use the <code>Bellona\Database\Model::delete()</code> instance method on your model instance.</p>
+
+<p>You can also use the <code>Bellona\Database\Model::assign()</code> method to assign multiple values to properties on your model instance at once.</p>
+
+<aside class="notice">
+  Only those properties which are listed in the <code>$fillable</code> array will be assigned.
+</aside>
+<pre class="highlight php tab-php"><code><span class="cp">&lt;?php</span>
+
+<span class="k">use</span> <span class="nx">App\Models\Post</span><span class="p">;</span>
+
+<span class="c1">// Find the post with primary key = 1
+</span><span class="nv">$post</span> <span class="o">=</span> <span class="nx">Post</span><span class="o">::</span><span class="na">find</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+
+<span class="c1">// Find the posts with primary key = 1 or 2 or 3
+</span><span class="nv">$post</span> <span class="o">=</span> <span class="nx">Post</span><span class="o">::</span><span class="na">find</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]);</span>
+
+<span class="c1">// Insert a new post
+</span><span class="nv">$post</span> <span class="o">=</span> <span class="nx">Post</span><span class="o">::</span><span class="na">create</span><span class="p">([</span><span class="s1">'author_id'</span> <span class="o">=&gt;</span> <span class="mi">1</span><span class="p">,</span> <span class="nx">title</span> <span class="o">=&gt;</span> <span class="s1">'Post Title.'</span><span class="p">,</span> <span class="nx">body</span> <span class="o">=&gt;</span> <span class="s1">'Post body...'</span><span class="p">]);</span>
+
+<span class="c1">// Insert multiple new posts
+</span><span class="nv">$post</span> <span class="o">=</span> <span class="nx">Post</span><span class="o">::</span><span class="na">create</span><span class="p">([</span>
+  <span class="p">[</span><span class="s1">'author_id'</span> <span class="o">=&gt;</span> <span class="mi">1</span><span class="p">,</span> <span class="nx">title</span> <span class="o">=&gt;</span> <span class="s1">'Post Title.'</span><span class="p">,</span> <span class="nx">body</span> <span class="o">=&gt;</span> <span class="s1">'Post body...'</span><span class="p">],</span>
+  <span class="p">[</span><span class="s1">'author_id'</span> <span class="o">=&gt;</span> <span class="mi">1</span><span class="p">,</span> <span class="nx">title</span> <span class="o">=&gt;</span> <span class="s1">'Post Title 2.'</span><span class="p">,</span> <span class="nx">body</span> <span class="o">=&gt;</span> <span class="s1">'Post body...'</span><span class="p">],</span>
+  <span class="p">[</span><span class="s1">'author_id'</span> <span class="o">=&gt;</span> <span class="mi">2</span><span class="p">,</span> <span class="nx">title</span> <span class="o">=&gt;</span> <span class="s1">'Post Title 3.'</span><span class="p">,</span> <span class="nx">body</span> <span class="o">=&gt;</span> <span class="s1">'Post body...'</span><span class="p">],</span>
+<span class="p">]);</span>
+
+<span class="c1">// Delete a single post
+</span><span class="nx">Post</span><span class="o">::</span><span class="na">delete</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+
+<span class="c1">// Delete multiple posts
+</span><span class="nx">Post</span><span class="o">::</span><span class="na">delete</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]);</span>
+
+</code></pre>
+<p>Extending <code>Bellona\Database\Model</code> will provide three additional methods which can be called statically: <code>Bellona\Database\Model::find()</code>, <code>Bellona\Database\Model::create()</code>, and <code>Bellona\Database\Model::destroy()</code>.</p>
+<pre class="highlight php tab-php"><code><span class="cp">&lt;?php</span>
+
+<span class="c1">// Get all posts
+</span><span class="nv">$posts</span> <span class="o">=</span> <span class="nx">App\Models\Post</span><span class="o">::</span><span class="na">get</span><span class="p">();</span>
+
+<span class="c1">// Get 5 posts where author_id = 1
+</span><span class="nv">$posts</span> <span class="o">=</span> <span class="nx">App\Models\Post</span><span class="o">::</span><span class="na">where</span><span class="p">(</span><span class="s1">'id'</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">limit</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">get</span><span class="p">();</span>
+</code></pre>
+<p>Additionally, extending <code>Bellona\Database\Model</code> gives you access to all of the <code>Bellona\Database\QueryBuilder</code> instance methods as static methods on your <code>Model</code> class. By default, any records returned using these methods will return instances of your <code>Model</code>.</p>
+<h1 id='views'>Views</h1>
+<p>Views are files which hold your presentational markup.</p>
+<h2 id='creating-views'>Creating views</h2>
+<p>To create a view, simply write a new file in the <code>app/views</code> directory.</p>
+<h2 id='using-views'>Using views</h2><pre class="highlight php tab-php"><code><span class="cp">&lt;?php</span>
+
+<span class="k">use</span> <span class="nx">Bellona\Support\Facades\View</span><span class="p">;</span>
+
+<span class="nv">$view</span> <span class="o">=</span> <span class="nx">app</span><span class="p">(</span><span class="s1">'Bellona\View\ViewFactory'</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">make</span><span class="p">(</span><span class="s1">'home'</span><span class="p">);</span>
+<span class="nv">$view</span><span class="o">-&gt;</span><span class="na">render</span><span class="p">();</span>
+
+<span class="c1">// Alternatively...
+</span><span class="nx">View</span><span class="o">::</span><span class="na">make</span><span class="p">(</span><span class="s1">'home'</span><span class="p">);</span>
+</code></pre>
+<blockquote>
+<p>Pass data to a view:</p>
+</blockquote>
+<pre class="highlight php tab-php"><code><span class="cp">&lt;?php</span>
+
+<span class="nv">$view</span> <span class="o">=</span> <span class="nx">app</span><span class="p">(</span><span class="s1">'Bellona\View\ViewFactory'</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">make</span><span class="p">(</span><span class="s1">'home'</span><span class="p">);</span>
+<span class="nv">$view</span><span class="o">-&gt;</span><span class="na">render</span><span class="p">([</span><span class="s1">'title'</span> <span class="o">=&gt;</span> <span class="s1">'Welcome!'</span><span class="p">]);</span>
+
+<span class="c1">// This will make a $title variable available in app/views/home.php, which holds the value 'Welcome!'.
+</span></code></pre>
+<p>To get access to the view as an instance of <code>Bellona\View\View</code>, use the <code>Bellona\View\ViewFactory::make()</code> instance method, which takes in the path to your view file, relative to the <code>app/views</code> directory and excluding the <code>.php</code> extension, as an argument. You can use the <code>Bellona\Support\Facades\View</code> facade to make this cleaner.</p>
+
+<p>You can then render your view, thereby sending it as HTML output to the user&#39;s browser, by using the <code>Bellona\View\View::render()</code> method. This takes in an optional array of data in the form of key-value pairs to pass to the view, so that each key is available as a variable within your view file.</p>
+
+<p>Alternatively, you can use the global <code>render()</code> helper, which accepts the path to your view as the first argument, and the optional data array as the second argument.</p>
+<h2 id='sharing-data-between-views'>Sharing data between views</h2><pre class="highlight php tab-php"><code><span class="cp">&lt;?php</span>
+
+<span class="k">use</span> <span class="nx">Bellona\Support\Facades\View</span><span class="p">;</span>
+
+<span class="c1">// Share the $title variable between all views hereafter.
+</span><span class="nx">View</span><span class="o">::</span><span class="na">share</span><span class="p">([</span><span class="s1">'title'</span> <span class="o">=&gt;</span> <span class="s1">'Welcome!'</span><span class="p">]);</span>
+
+<span class="c1">// Render the app/views/home.php view, which will have access to the $title variable.
+</span><span class="nx">render</span><span class="p">(</span><span class="s1">'home'</span><span class="p">);</span>
+
+<span class="c1">// Render the app/views/about.php view, and override the $title variable for this view only.
+</span><span class="nx">render</span><span class="p">(</span><span class="s1">'about'</span><span class="p">,</span> <span class="p">[</span><span class="s1">'title'</span> <span class="o">=&gt;</span> <span class="s1">'About Us'</span><span class="p">]);</span>
+</code></pre>
+<p>To share data between views, use the <code>Bellona\View\ViewFactory::share()</code> method, which takes in the data you wish to share as an argument. All view instanced created after this call will then have access to this shared data, in addition to any specific data passed only to a single view.</p>
+<h2 id='extending-templates'>Extending templates</h2>
+<blockquote>
+<p>Define an <code>app/views/templates/default.php</code> template:</p>
+</blockquote>
+<pre class="highlight php tab-php"><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html</span> <span class="na">lang=</span><span class="s">"en"</span><span class="nt">&gt;</span>
+
+<span class="nt">&lt;head&gt;</span>
+    <span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">"UTF-8"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"viewport"</span> <span class="na">content=</span><span class="s">"width=device-width, initial-scale=1.0"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;meta</span> <span class="na">http-equiv=</span><span class="s">"X-UA-Compatible"</span> <span class="na">content=</span><span class="s">"ie=edge"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;title&gt;</span><span class="cp">&lt;?=</span> <span class="p">(</span><span class="nb">isset</span><span class="p">(</span><span class="nv">$title</span><span class="p">)</span> <span class="o">?</span> <span class="nx">h</span><span class="p">(</span><span class="nv">$title</span><span class="p">)</span> <span class="o">.</span> <span class="s1">' | '</span> <span class="o">:</span> <span class="s1">''</span><span class="p">)</span> <span class="o">.</span> <span class="nx">SITE_NAME</span> <span class="cp">?&gt;</span><span class="nt">&lt;/title&gt;</span>
+<span class="nt">&lt;/head&gt;</span>
+
+<span class="nt">&lt;body&gt;</span>
+
+  <span class="c">&lt;!-- Main content --&gt;</span>
+  <span class="cp">&lt;?php</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">yield</span><span class="p">(</span><span class="s1">'body'</span><span class="p">)</span> <span class="cp">?&gt;</span>
+
+  <span class="c">&lt;!-- Footer --&gt;</span>
+  <span class="cp">&lt;?php</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">yield</span><span class="p">(</span><span class="s1">'foot'</span><span class="p">)</span> <span class="cp">?&gt;</span>
+
+<span class="nt">&lt;/body&gt;</span>
+
+<span class="nt">&lt;/html&gt;</span>
+</code></pre>
+<blockquote>
+<p>Extend your template from a view and inject content into the default body yield:</p>
+</blockquote>
+<pre class="highlight php tab-php"><code><span class="cp">&lt;?php</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">extends</span><span class="p">(</span><span class="s1">'default'</span><span class="p">)</span> <span class="cp">?&gt;</span>
+
+<span class="nt">&lt;p&gt;</span>This content will be injected into the 'body' yield.<span class="nt">&lt;/p&gt;</span>
+</code></pre>
+<blockquote>
+<p>Inject content into the body and the footer yields:</p>
+</blockquote>
+<pre class="highlight php tab-php"><code><span class="cp">&lt;?php</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">extends</span><span class="p">(</span><span class="s1">'default'</span><span class="p">)</span> <span class="cp">?&gt;</span>
+
+<span class="cp">&lt;?php</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">block</span><span class="p">(</span><span class="s1">'body'</span><span class="p">)</span> <span class="cp">?&gt;</span>
+  <span class="nt">&lt;p&gt;</span>This content will be injected into the 'body' yield.<span class="nt">&lt;/p&gt;</span>
+<span class="cp">&lt;?php</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">endblock</span><span class="p">()</span> <span class="cp">?&gt;</span>
+
+<span class="cp">&lt;?php</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">block</span><span class="p">(</span><span class="s1">'foot'</span><span class="p">)</span> <span class="cp">?&gt;</span>
+  <span class="nt">&lt;p&gt;</span> This content will be injected into the 'foot' yield.<span class="nt">&lt;/p&gt;</span>
+<span class="cp">&lt;?php</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">endblock</span><span class="p">()</span> <span class="cp">?&gt;</span>
+</code></pre>
+<p>Bellona allows you use files containing markup as templates which can be extended by your views.</p>
+
+<p>First, write a template file in the <code>app/views/layouts</code> directory. This file should call the <code>Bellona\View\View::yield()</code> instance method anywhere you wish to inject content from your views which extend this template. The <code>Bellona\View\View::yield()</code> takes in the name of your content as an argument. If the content does not exist, an empty string will be injected instead.</p>
+
+<p>Next, write a view file which extends the template using the <code>Bellona\View\View::extends()</code> method, which takes in the path to the template to extend, relative to the <code>app/views/layouts</code> directory and excluding the <code>.php</code> extension, as an argument.</p>
+
+<p>You can define the content you wish to inject within your views by preceding your content with a <code>Bellona\View\View::block()</code> call, and ending it with a <code>Bellona\View\View::endblock()</code> call. <code>Bellona\View\View::block()</code> takes in the name to assign to your content, which is then used by the <code>Bellona\View\View::yield()</code> method in your template.</p>
+
+<p>If you do not specify any content blocks, your view will be automatically injected into the &#39;body&#39; yield, if your template defines one. If you do not specify any content blocks and your template does not define a &#39;body&#39; yield, nothing will be output. If you do define a content block, the &#39;body&#39; yield will not be injected automatically, but should be injected using a content block as usual.</p>
+<h1 id='csrf-protection'>CSRF Protection</h1>
+<p>Bellona comes with the CSRF middleware enabled by default. All incoming requests that are not <code>GET</code> requests are required to present a CSRF token either in the request body or in an <code>X-CSRF-TOKEN</code> header. If a valid token is not presented with the request, the middleware will flash a session message and redirect back to the previous page before exiting the script, though you can change this behaviour by modifying the <code>App\Middleware\CSRF::deny()</code> method.</p>
+<h2 id='csrf-tokens-in-views'>CSRF tokens in views</h2><pre class="highlight php tab-php"><code><span class="nt">&lt;form</span> <span class="na">action=</span><span class="s">"/posts"</span> <span class="na">method=</span><span class="s">"POST"</span><span class="nt">&gt;</span>
+  <span class="cp">&lt;?=</span> <span class="nx">CSRF</span><span class="o">::</span><span class="na">input</span><span class="p">()</span> <span class="cp">?&gt;</span>
+  ...
+<span class="nt">&lt;/form&gt;</span>
+</code></pre>
+<p>To include a valid CSRF in your view, thereby ensuring it gets sent with a form, Bellona provides a <code>Bellona\Security\CSRF::token()</code> instance method which returns the valid token as a string. In your view, you should add this as the value of a hidden input field in your form with the name of <code>csrf_token</code>. Alternatively, this can be done automatically by using the <code>Bellona\Security\CSRF::input()</code> instance method directly in your form.</p>
+
+<aside class="notice">
+  Bellona provides a convenient <code>Bellona\Support\Facades\CSRF</code> facade for use within your views so that you do not have to manually resolve the <code>Bellona\Security\CSRF</code> service. This facade is also aliased as <code>CSRF</code> so that you do not have to use the full namespace within your views.
+</aside>
+<h2 id='csrf-tokens-with-ajax'>CSRF tokens with ajax</h2>
+<blockquote>
+<p>Output the CSRF token in your view, somewhere it can be retrieved client-side with JavaScript:</p>
+</blockquote>
+<pre class="highlight php tab-php"><code>  <span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"csrf-token"</span> <span class="na">content=</span><span class="s">"</span><span class="cp">&lt;?=</span> <span class="nx">CSRF</span><span class="o">::</span><span class="na">token</span><span class="p">()</span> <span class="cp">?&gt;</span><span class="s">"</span>
+</code></pre>
+<blockquote>
+<p>Send the CSRF token with the request, either in the request body or as an <code>X-CSRF-TOKEN</code> header, and capture the new CSRF from the response for use in further requests:</p>
+</blockquote>
+<pre class="highlight javascript tab-javascript"><code><span class="nx">fetch</span><span class="p">(</span><span class="s2">"/api/posts"</span><span class="p">,</span> <span class="p">{</span>
+  <span class="na">method</span><span class="p">:</span> <span class="s2">"POST"</span><span class="p">,</span>
+  <span class="na">headers</span><span class="p">:</span> <span class="p">{</span>
+    <span class="s2">"Content-type"</span><span class="p">:</span> <span class="s2">"application/json"</span><span class="p">,</span>
+    <span class="s2">"X-CSRF-TOKEN"</span><span class="p">:</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">'meta[name="csrf-token"]'</span><span class="p">).</span><span class="nx">getAttribute</span><span class="p">(</span><span class="s1">'content'</span><span class="p">);</span>
+  <span class="p">},</span>
+  <span class="na">body</span><span class="p">:</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">({</span>
+    <span class="na">title</span><span class="p">:</span> <span class="s2">"The post title"</span><span class="p">,</span>
+    <span class="na">body</span><span class="p">:</span> <span class="s2">"The post body"</span>
+  <span class="p">})</span>
+<span class="p">}).</span><span class="nx">then</span><span class="p">(</span><span class="nx">res</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="kr">const</span> <span class="nx">newCsrfToken</span> <span class="o">=</span> <span class="nx">res</span><span class="p">.</span><span class="nx">headers</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s2">"XSRF-TOKEN"</span><span class="p">);</span>
+  <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">'meta[name="csrf-token"]'</span><span class="p">).</span><span class="nx">setAttribute</span><span class="p">(</span><span class="s1">'content'</span><span class="p">,</span> <span class="nx">newCsrfToken</span><span class="p">);</span>
+  <span class="p">...</span>
+<span class="p">});</span>
+</code></pre>
+<p>Bellona sends a new CSRF token back with each response in the form of a <code>XSRF-TOKEN</code> response header. If you are using ajax to send requests, you should capture this token and return it with any subsequent request that is not a <code>GET</code> request, otherwise the request will be denied.</p>
+<h1 id='form-validation'>Form Validation</h1>
+<p>The <code>Bellona\Validation\Validator</code> library can be used to validate incoming requests.</p>
+<h2 id='manually-validating-data'> Manually validating data</h2><pre class="highlight php tab-php"><code><span class="cp">&lt;?php</span>
+
+<span class="nv">$data</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'email'</span> <span class="o">=&gt;</span> <span class="s1">'invalidemail'</span><span class="p">];</span>
+
+<span class="nv">$rules</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'email'</span> <span class="o">=&gt;</span> <span class="s1">'required|format:email'</span><span class="p">];</span>
+
+<span class="nv">$validator</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Bellona\Validation\Validator</span><span class="p">(</span><span class="nv">$data</span><span class="p">,</span> <span class="nv">$rules</span><span class="p">);</span>
+
+<span class="nv">$validator</span><span class="o">-&gt;</span><span class="na">run</span><span class="p">();</span>
+
+<span class="k">if</span> <span class="p">(</span><span class="nv">$validator</span><span class="o">-&gt;</span><span class="na">validates</span><span class="p">())</span> <span class="p">{</span>
+  <span class="c1">// All validations passed...
+</span><span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+  <span class="c1">// Get the validation errors.
+</span>  <span class="nv">$errors</span> <span class="o">=</span> <span class="nv">$validator</span><span class="o">-&gt;</span><span class="na">getErrors</span><span class="p">();</span>
+<span class="p">}</span>
+</code></pre>
+<p>To validate data manually, you must instantiate the <code>Bellona\Validation\Validator</code> class and pass in any data you wish to validate yourself.</p>
+
+<p><code>Bellona\Validation\Validator::__construct()</code> takes in the data you wish to validate as the first argument, as well as an array of validation rules to run against said data as the second argument. You can then run the validations with the <code>Bellona\Validation\Validator::run()</code> method and subsequently check that all validations passed with the <code>Bellona\Validation\Validator::validates()</code> method. If all validations passed, this will return <code>true</code>; otherwise, it will return false and the validation errors will be captured and retrievable with the <code>Bellona\Validation\Validator::getErrors()</code> method.</p>
+<h2 id='validating-request-data'>Validating request data</h2><pre class="highlight php tab-php"><code><span class="cp">&lt;?php</span>
+
+<span class="nx">Router</span><span class="o">::</span><span class="na">post</span><span class="p">(</span><span class="s1">'/posts'</span><span class="p">,</span> <span class="k">function</span><span class="p">(</span><span class="nx">Bellona\Http\Request</span> <span class="nv">$request</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nv">$request</span><span class="o">-&gt;</span><span class="na">validate</span><span class="p">([</span>
+    <span class="s1">'email'</span> <span class="o">=&gt;</span> <span class="s1">'required|format:email'</span>
+  <span class="p">]);</span>
+
+  <span class="c1">// All validations passed...
+</span><span class="p">});</span>
+</code></pre>
+<p>The <code>Bellona\Http\Request</code> instance comes with a <code>Bellona\Http\Request::validate()</code> function to automatically validate the incoming request data for you. This only takes in the validation rules as an argument, and runs them against the incoming request body automatically.</p>
+
+<p>If any validations fail, they will be automatically flashed to the session as an <code>errors</code> array and available from your view as an <code>$errors</code> variable. The user will also be redirected back to the previous location and the script will be exited.</p>
+<h1 id='file-uploads'>File Uploads</h1>
+<p>The <code>Bellona\Uploads\FileUpload</code> class can be used to securely verify and store files uploaded by the user in the request.</p>
+<h2 id='uploading-files'> Uploading files</h2><pre class="highlight php tab-php"><code><span class="cp">&lt;?php</span>
+
+<span class="nv">$file</span> <span class="o">=</span> <span class="nv">$_FILES</span><span class="p">[</span><span class="s1">'image'</span><span class="p">];</span>
+
+<span class="nv">$upload</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Bellona\Uploads\FileUpload</span><span class="p">(</span><span class="nv">$file</span><span class="p">);</span>
+
+<span class="k">if</span> <span class="p">(</span><span class="nv">$upload</span><span class="o">-&gt;</span><span class="na">store</span><span class="p">(</span><span class="nx">PUBLIC_ROOT</span> <span class="o">.</span> <span class="s1">'/uploads'</span><span class="p">)</span> <span class="p">{</span>
+  <span class="c1">// File was successfully uploaded...
+</span>  <span class="nv">$uploadedName</span> <span class="o">=</span> <span class="nv">$upload</span><span class="o">-&gt;</span><span class="na">getName</span><span class="p">();</span>
+<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+  <span class="c1">// Get the error which caused the failure.
+</span>  <span class="nv">$error</span> <span class="o">=</span> <span class="nv">$upload</span><span class="o">-&gt;</span><span class="na">getError</span><span class="p">();</span>
+<span class="p">}</span>
+</code></pre>
+<p><code>Bellona\Uploads\FileUpload::__construct()</code> takes the specific array within the <code>$_FILES</code> superglobal corresponding to the file you wish to upload as an argument. You can then store the file permanently with the <code>Bellona\Uploads\FileUpload::store()</code> method, which takes in the absolute path to the directory where you want to store the file as an argument. If the file was successfully stored, this will return <code>true</code>; otherwise it will return false and the error which caused the failure can be retrieved with the <code>Bellona\Uploads\FileUpload::getError()</code> method.</p>
+
+<p>The <code>Bellona\Uploads\FileUpload</code> class has some default behaviours you should be aware of.</p>
+
+<ul>
+<li>The maximum size allowed for a file is the same as <code>upload_max_filesize</code> in your <code>php.ini</code> file.</li>
+<li>If the destination directory does not exist, it will be created.</li>
+<li>The file will be renamed by appending a number to the end of the file name if a file with the same name already exists in the destination directory.</li>
+<li>Only the following extensions are permitted: jpg, jpeg, gif, png, svg, webp.</li>
+<li>Any whitespace in the file name will be replaced with underscores.</li>
+</ul>
+
+<p>You can override most of these defaults as well as setting other options with the <code>Bellona\Uploads\FileUpload::setOptions()</code> array, which takes in an array of options you wish to set.</p>
+
+<p>If you wish to retrieve the name with which a file was uplaoded, you can use the <code>Bellona\Uploads\FileUpload::getName()</code> instance method.</p>
+<h2 id='deleting-a-file'>Deleting a file</h2><pre class="highlight php tab-php"><code><span class="cp">&lt;?php</span>
+
+<span class="nv">$upload</span><span class="o">-&gt;</span><span class="na">delete</span><span class="p">();</span>
+</code></pre>
+<p>If you wish to delete a file after storing it, for example if something goes wrong later in your script, you can use the <code>Bellona\Uploads\FileUpload::delete()</code> method, which returns <code>true</code> if the file was successfully delete; otherwise it will return false.</p>
+<h2 id='uploading-multiple-files'>Uploading multiple files</h2><pre class="highlight php tab-php"><code><span class="cp">&lt;?php</span>
+
+<span class="nv">$profilePic</span> <span class="o">=</span> <span class="nv">$_FILES</span><span class="p">[</span><span class="s1">'profile_pic'</span><span class="p">];</span>
+<span class="nv">$coverImg</span> <span class="o">=</span> <span class="nv">$_FILES</span><span class="p">[</span><span class="s1">'cover_img'</span><span class="p">];</span>
+
+<span class="nv">$files</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'profilePic'</span> <span class="o">=&gt;</span> <span class="nv">$profilePic</span><span class="p">,</span> <span class="s1">'coverImg'</span> <span class="o">=&gt;</span> <span class="nv">$coverImg</span><span class="p">]</span>
+<span class="nv">$destination</span> <span class="o">=</span> <span class="nx">PUBLIC_ROOT</span> <span class="o">.</span> <span class="s1">'/uploads'</span><span class="p">;</span>
+
+<span class="nv">$result</span> <span class="o">=</span> <span class="nx">Bellona\Uploads\FileUpload</span><span class="o">::</span><span class="na">upload</span><span class="p">(</span><span class="nv">$files</span><span class="p">,</span> <span class="nv">$destination</span><span class="p">);</span>
+
+<span class="k">if</span> <span class="p">(</span><span class="nv">$result</span><span class="p">)</span> <span class="p">{</span>
+  <span class="c1">// All files were successfully uploaded...
+</span>  <span class="nv">$profilePicName</span> <span class="o">=</span> <span class="nx">Bellona\Uploads\FileUpload</span><span class="o">::</span><span class="na">getUploadedName</span><span class="p">(</span><span class="s1">'profilePic'</span><span class="p">);</span>
+  <span class="nv">$coverImgName</span> <span class="o">=</span> <span class="nx">Bellona\Uploads\FileUpload</span><span class="o">::</span><span class="na">getUploadedName</span><span class="p">(</span><span class="s1">'coverImg'</span><span class="p">);</span>
+<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+  <span class="c1">// Something went wrong...
+</span><span class="p">}</span>
+</code></pre>
+<p>The <code>Bellona\Uploads\FileUpload</code> class provides a <code>Bellona\Uploads\FileUpload::upload()</code> static method for uploading multiple files at once. It takes an array of files to upload as the first argument and a destination directory as a second argument. Optionally, you can also pass a third argument specifying the options to set for all files. It will return true on success and false on failure.</p>
+
+<p>You can then get the name with which any of the files were uploaded using the <code>Bellona\Uploads\FileUpload::getUploadedName()</code> static method and passing it the key corresponding to the file whose name youi wish to retrieve.</p>
+
+<p>If something goes wrong while uploading one of the files, all the files that were already uploaded will be deleted automatically.</p>
+<h1 id='query-builder'>Query Builder</h1>
+<p>The <code>Bellona\Database\QueryBuilder</code> is based on <a href="https://laravel.com/docs/5.8/queries">Laravel&#39;s query builder</a> and provides a number of methods to fluently create database queries.</p>
+
+<aside class="notice">
+  Bellona provides a conveninent <code>Bellona\Support\Facades\DB</code> facade for accessing these methods statically.
+</aside>
+<h2 id='fetching-multiple-records-with-db-get'>Fetching multiple records with DB::get()</h2><pre class="highlight php tab-php"><code><span class="cp">&lt;?php</span>
+
+<span class="nv">$posts</span> <span class="o">=</span> <span class="nx">DB</span><span class="o">::</span><span class="na">table</span><span class="p">(</span><span class="s1">'posts'</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">get</span><span class="p">();</span> <span class="c1">// fetch all posts
+</span><span class="nv">$posts</span> <span class="o">=</span> <span class="nx">DB</span><span class="o">::</span><span class="na">table</span><span class="p">(</span><span class="s1">'posts'</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">where</span><span class="p">(</span><span class="s1">'user_id'</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">get</span><span class="p">();</span> <span class="c1">// fetch all posts where user_id = 10
+</span><span class="nv">$posts</span> <span class="o">=</span> <span class="nx">DB</span><span class="o">::</span><span class="na">table</span><span class="p">(</span><span class="s1">'posts'</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">where</span><span class="p">(</span><span class="s1">'user_id'</span><span class="p">,</span> <span class="s1">'!='</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">get</span><span class="p">();</span> <span class="c1">// fetch all posts where user_id != 10
+</span><span class="nv">$posts</span> <span class="o">=</span> <span class="nx">DB</span><span class="o">::</span><span class="na">table</span><span class="p">(</span><span class="s1">'posts'</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">limit</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">offset</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">get</span><span class="p">();</span> <span class="c1">// fetch 20 posts, starting from the 51st
+</span><span class="nv">$posts</span> <span class="o">=</span> <span class="nx">DB</span><span class="o">::</span><span class="na">table</span><span class="p">(</span><span class="s1">'posts'</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">where</span><span class="p">(</span><span class="s1">'user_id'</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">limit</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">offset</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">get</span><span class="p">();</span> <span class="c1">// fetch 10 posts where user_id = 10, starting from the 11th
+</span></code></pre>
+<p>All results are returned as an array of object instances of the <code>stdClass</code> class.</p>
+
+<aside class="notice">
+  The order of the query building does not matter, so long as <code>DB::table()</code> is first, and <code>DB::get()</code> is last.
+</aside>
+<h2 id='fetching-a-single-record-with-db-first'>Fetching a single record with DB::first()</h2><pre class="highlight php tab-php"><code><span class="cp">&lt;?php</span>
+
+<span class="nv">$posts</span> <span class="o">=</span> <span class="nx">DB</span><span class="o">::</span><span class="na">table</span><span class="p">(</span><span class="s1">'posts'</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">first</span><span class="p">();</span> <span class="c1">// fetch first post
+</span></code></pre>
+<p>This adds a <code>LIMIT 1</code> to the query and returns the record directly, rather than an array.</p>
+<h2 id='counting-records-with-db-count'>Counting records with DB::count()</h2><pre class="highlight php tab-php"><code><span class="cp">&lt;?php</span>
+
+<span class="nv">$posts</span> <span class="o">=</span> <span class="nx">DB</span><span class="o">::</span><span class="na">table</span><span class="p">(</span><span class="s1">'posts'</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">count</span><span class="p">();</span> <span class="c1">// count all posts
+</span></code></pre>
+<p>This returns and integer of the number of records that match the query.</p>
+<h2 id='fetching-records-with-db-join-db-leftjoin-db-rightjoin-and-db-select'>Fetching records with DB::join(), DB::leftJoin(), DB::rightJoin(), and DB::select()</h2><pre class="highlight php tab-php"><code><span class="cp">&lt;?php</span>
+
+<span class="nv">$posts</span> <span class="o">=</span> <span class="nx">DB</span><span class="o">::</span><span class="na">table</span><span class="p">(</span><span class="s1">'posts'</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">join</span><span class="p">(</span><span class="s1">'users'</span><span class="p">,</span> <span class="s1">'posts.user_id'</span><span class="p">,</span> <span class="s1">'='</span><span class="p">,</span> <span class="s1">'users.id'</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">get</span><span class="p">();</span> <span class="c1">// inner join posts table with users table on posts.user_id = users.id and retrieve all records
+</span><span class="nv">$posts</span> <span class="o">=</span> <span class="nx">DB</span><span class="o">::</span><span class="na">table</span><span class="p">(</span><span class="s1">'posts'</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">leftJoin</span><span class="p">(</span><span class="s1">'users'</span><span class="p">,</span> <span class="s1">'posts.user_id'</span><span class="p">,</span> <span class="s1">'='</span><span class="p">,</span> <span class="s1">'users.id'</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">get</span><span class="p">();</span> <span class="c1">// left join posts table with users table on posts.user_id = users.id and retrieve all records
+</span><span class="nv">$posts</span> <span class="o">=</span> <span class="nx">DB</span><span class="o">::</span><span class="na">table</span><span class="p">(</span><span class="s1">'posts'</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">rightJoin</span><span class="p">(</span><span class="s1">'users'</span><span class="p">,</span> <span class="s1">'posts.user_id'</span><span class="p">,</span> <span class="s1">'='</span><span class="p">,</span> <span class="s1">'users.id'</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">get</span><span class="p">();</span> <span class="c1">// right join posts table with users table on posts.user_id = users.id and retrieve all records
+</span><span class="nv">$posts</span> <span class="o">=</span> <span class="nx">DB</span><span class="o">::</span><span class="na">table</span><span class="p">(</span><span class="s1">'posts'</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">join</span><span class="p">(</span><span class="s1">'users'</span><span class="p">,</span> <span class="s1">'posts.user_id'</span><span class="p">,</span> <span class="s1">'='</span><span class="p">,</span> <span class="s1">'users.id'</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">select</span><span class="p">(</span><span class="s1">'posts.*'</span><span class="p">,</span> <span class="s1">'users.id as userId'</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">get</span><span class="p">();</span> <span class="c1">// inner join posts table with users table on posts.user_id = users.id and retrieve all records, returning only the id from the users table
+</span></code></pre>
+<aside class="warning">
+  SQL indicators such as table and column names can not be bound to prepared statements, so joins and selects are not immune to SQL injection. A simple regex filter is used to deter it, but if dynamic data is used for table or column names it should be manually filtered through an array of whitelisted values first.
+</aside>
+<h2 id='inserting-records'>Inserting records</h2><pre class="highlight php tab-php"><code><span class="cp">&lt;?php</span>
+
+<span class="nv">$key</span> <span class="o">=</span> <span class="nx">DB</span><span class="o">::</span><span class="na">table</span><span class="p">(</span><span class="s1">'posts'</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">insert</span><span class="p">([</span><span class="s1">'title'</span> <span class="o">=&gt;</span> <span class="s1">'Post Title'</span><span class="p">,</span> <span class="s1">'body'</span> <span class="o">=&gt;</span> <span class="s1">'Here goes the post body...'</span><span class="p">]);</span>
+<span class="nv">$key</span> <span class="o">=</span> <span class="nx">DB</span><span class="o">::</span><span class="na">table</span><span class="p">(</span><span class="s1">'posts'</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">insert</span><span class="p">([</span>
+    <span class="p">[</span><span class="s1">'title'</span> <span class="o">=&gt;</span> <span class="s1">'Post Title'</span><span class="p">,</span> <span class="s1">'body'</span> <span class="o">=&gt;</span> <span class="s1">'Here goes the post body...'</span><span class="p">],</span>
+    <span class="p">[</span><span class="s1">'title'</span> <span class="o">=&gt;</span> <span class="s1">'Post Title #2'</span><span class="p">,</span> <span class="s1">'body'</span> <span class="o">=&gt;</span> <span class="s1">'Here goes the second post body...'</span><span class="p">]</span>
+<span class="p">]);</span>
+</code></pre>
+<p>If at least one record is successfully inserted into the database, <code>DB::insert()</code> returns the primary key of the last inserted record. If no records are inserted, it returns false.</p>
+<h2 id='updating-records'>Updating records</h2><pre class="highlight php tab-php"><code><span class="cp">&lt;?php</span>
+
+<span class="nv">$result</span> <span class="o">=</span> <span class="nx">DB</span><span class="o">::</span><span class="na">table</span><span class="p">(</span><span class="s1">'posts'</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">update</span><span class="p">([</span><span class="s1">'title'</span> <span class="o">=&gt;</span> <span class="s1">'Post Title'</span><span class="p">]);</span> <span class="c1">// update all posts
+</span><span class="nv">$result</span> <span class="o">=</span> <span class="nx">DB</span><span class="o">::</span><span class="na">table</span><span class="p">(</span><span class="s1">'posts'</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">where</span><span class="p">(</span><span class="s1">'id'</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">update</span><span class="p">([</span><span class="s1">'title'</span> <span class="o">=&gt;</span> <span class="s1">'Post Title'</span><span class="p">]);</span> <span class="c1">// update only posts where id = 10
+</span></code></pre>
+<p>Returns the number of records effected by the query.</p>
+<h2 id='deleting-records'>Deleting records</h2><pre class="highlight php tab-php"><code><span class="cp">&lt;?php</span>
+
+<span class="nv">$result</span> <span class="o">=</span> <span class="nx">DB</span><span class="o">::</span><span class="na">table</span><span class="p">(</span><span class="s1">'posts'</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">delete</span><span class="p">();</span> <span class="c1">// delete all posts
+</span><span class="nv">$result</span> <span class="o">=</span> <span class="nx">DB</span><span class="o">::</span><span class="na">table</span><span class="p">(</span><span class="s1">'posts'</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">where</span><span class="p">(</span><span class="s1">'id'</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">delete</span><span class="p">();</span> <span class="c1">// delete posts where id = 10
+</span></code></pre>
+<p>Returns the number of records effected by the query.</p>
+<h2 id='direct-queries-with-db-query'>Direct queries with DB::query()</h2>
+<p>This method accepts an SQL query string and an optional array of parameters to bind before executing.</p>
+<pre class="highlight php tab-php"><code><span class="cp">&lt;?php</span>
+
+<span class="nv">$posts</span> <span class="o">=</span> <span class="nx">DB</span><span class="o">::</span><span class="na">query</span><span class="p">(</span><span class="s1">'SELECT * FROM posts WHERE user_id = ?'</span><span class="p">,</span> <span class="p">[</span><span class="mi">10</span><span class="p">]);</span>
+<span class="nv">$posts</span> <span class="o">=</span> <span class="nx">DB</span><span class="o">::</span><span class="na">query</span><span class="p">(</span><span class="s1">'SELECT * FROM posts WHERE user_id = :user_id'</span><span class="p">,</span> <span class="p">[</span><span class="s1">':user_id'</span> <span class="o">=&gt;</span> <span class="mi">10</span><span class="p">]);</span>
+</code></pre>
       </div>
       <div class="dark-box">
-          <div class="lang-selector">
-                <a href="#" data-language-name="shell">shell</a>
-                <a href="#" data-language-name="ruby">ruby</a>
-                <a href="#" data-language-name="python">python</a>
-                <a href="#" data-language-name="javascript">javascript</a>
-          </div>
       </div>
     </div>
   </body>
