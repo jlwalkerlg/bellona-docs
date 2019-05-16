@@ -1,3 +1,3 @@
 # Documentation
 
-View the [official Bellona documentation](https://github.com/jlwalkerlg/bellona-docs).
+View the [official Bellona documentation](https://jlwalkerlg.github.io/bellona-docs/).
